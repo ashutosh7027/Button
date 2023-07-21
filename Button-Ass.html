@@ -1,0 +1,63 @@
+!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><h2>Increment and Decrement Buttons</h2></title>
+  <style>
+    body{
+      font-family: Arial;
+      display: flex;
+      align-items: centre;
+      justify-content: center;
+      height: 5vh;
+    }
+    .container{
+      display: flex;
+      align-items: centre;
+    }
+    
+    button {
+      font-size: 14px;
+      background-color: #c06316;
+      color: #9594cd;
+      align-items: centre;
+      margin-top: 0 10px;
+    }
+    
+    #count{
+      font-size: 24px;
+      margin: 0 20px;
+    }
+  </style>
+  </head>
+<body>
+
+    <div class="container">
+        <button id="decrementBtn" onclick="decrement()">-</button>
+        <span id="count">0</span>
+        <button id="incrementBtn" onclick="increment()">+</button>
+      </div>
+<script>
+let countValue = 0;
+
+function increment() {
+  countValue++;
+  updateCount();
+}
+
+function decrement() {
+  if (countValue > 0) {
+    countValue--;
+    updateCount();
+  }
+}
+
+function updateCount() {
+  const countElement = document.getElementById('count');
+  countElement.textContent = countValue;
+}
+</script>
+
+</body>
+</html>
